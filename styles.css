@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Afacad:ital,wght@0,400..700;1,400..700&family=Freeman&family=Poetsen+One&family=Sacramento&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #1d018c, #5b06b6);
+    overflow: hidden;
+}
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100rem;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    width: 2.5px;
+    height: 2px;
+    border-radius: 50%;
+    animation: moveUp linear infinite;
+    animation-duration: 5s;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10vh);
+    }
+} 
+
+/* Blink Glowing Text Effect */
+
+.blink-text {
+    font-size: 60px;
+    /* line-height: calc(20px + 20vh); */
+    text-align: center;
+    text-shadow: 0 0 5px #31dae0, 0 0 15px #31dae0, 0 0 20px #31dae0, 0 0 40px #31dae0, 0 0 60px #0a80d5, 0 0 10px #31dae0, 0 0 98px #0a80d5;
+    color: #31dae0;
+    font-family: "Dancing Script", cursive;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 8s infinite;
+  }
+  @-webkit-keyframes blink {
+  
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      text-shadow: 0 0 5px #31dae0, 0 0 15px #31dae0, 0 0 20px #31dae0, 0 0 40px #31dae0, 0 0 60px #0a80d5, 0 0 10px #31dae0, 0 0 98px #0a80d5;
+      color: #31dae0;
+    }
+  }
+  
+  @keyframes blink {
+  
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      text-shadow: 0 0 5px #447cff, 0 0 15px #447cff, 0 0 20px #447cff, 0 0 40px #447cff, 0 0 60px #0a80d5, 0 0 10px #447cff, 0 0 98px #0a80d5;
+      color: #31dae0;
+    }
+  }
+
+
+  /* hero content */
+
+  .hero-h1 {
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2.3rem;
+    line-height: 5px;
+    font-family: 'Poetsen One', sans-serif;
+  }
+  .hero-p {
+      color: #31dae0;
+      text-align: center;
+      font-size: 19px;
+      font-family: 'Freeman', sans-serif;  
+  }
+  .content-p {
+    font-family: 'Afacad', sans-serif;
+    font-size: 22px;
+    padding: 0 20px;
+    margin: 7vh auto 0vh auto;
+    width: 60%;
+    color: white;
+    border-left: 3px solid #31dae0;
+  }
+  .content-h2 {
+    color: white;
+    text-align: center;
+    padding: 10px 0 0 50px;
+    font-size: 30px;
+    font-family: 'Freeman', sans-serif;
+  }
+/* Boxes */
+.boxes-container {
+    display: flex;
+    padding: 10px;
+    width: 90vw;
+    justify-content: space-between;
+}
+.boxes {
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+    width: 18vw;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.boxes img{
+    border-radius: 50%;
+    width: 18vw;
+    height: 100%;
+    /* height: 300px; */
+    opacity: 0.8;
+    transition: all ease 0.3s;
+}
+.boxes img:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+@media (max-width:900px){
+    .content {
+        display: block;
+    }
+    .box-1, .box-2 {
+        display: flex;
+    }
+}
+/* Bottom Content */
+.bottom-content {
+    position: relative;
+    text-align: right;
+    float: right;
+    bottom: 10px;
+}
+.bottom-content p {
+    font-size: 13px;
+    font-family: sans-serif;
+    color: rgb(157, 157, 157);
+    text-align: right;
+    float: right;
+    padding: 0 10px 0 0;
+}
+.bottom-content span {
+    color: rgb(255, 255, 255);
+}
