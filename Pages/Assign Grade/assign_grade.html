@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To assign grade to a subject based on total marks and obtained marks</title>
+    <link rel="stylesheet" href="assign_grade.css">
+</head>
+<body>
+    <div class="stars-container">
+        <!-- Stars will be dynamically added here -->
+    </div>
+
+    <div class="content">
+        <h1>Calculate percentage and assign grades</h1>
+
+        <form>
+            <label for="obtainedMarks">Enter obtained marks:</label>
+            <input type="number" id="obtainedMarks" min="0" required><br>
+
+            <label for="totalMarks">Enter total marks:</label>
+            <input type="number" id="totalMarks" min="0" required><br>
+            <button type="button" id="calculateButton">Calculate</button><br>
+
+            <div id="result1"></div>
+            <div id="result2"></div>
+            <div id="result3"></div>
+        </form>
+
+        <br><br>
+        <div class="links">
+            <a href="/Pages/Acceleration/acc.html" class="links-a">Find Acceleration of moving objects</a>
+            <a href="/Pages/Even or Odd/even_odd.html" target="_blank" class="links-a">Whether the number is even or odd</a>
+            <a href="/Pages/Larger No/larger-no.html" target="_blank" class="links-a">Find larger number</a>
+            <a href="/Pages/All Projects/all.html" class="_4" target="_blank">All Projects</a>
+        </div>
+    </div>
+
+
+<script src="assign_grade.js"></script>
+</body>
+
+</html>

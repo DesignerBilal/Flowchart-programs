@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Afacad:ital,wght@0,400..700;1,400..700&family=Freeman&family=Poetsen+One&family=Sacramento&display=swap');
+
+body {
+    font-family: 'Afacad', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #4e1a82, #89449a);
+}
+
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+}
+
+@media (max-width:1200px) {
+    .stars-container {
+        height: 55rem;
+    }
+}
+
+
+@media (max-width:1150px) {
+    .stars-container {
+        height: 65rem;
+    }
+}
+
+@media (max-width:764px) {
+    .stars-container {
+        height: 70rem;
+    }
+}
+
+@media (max-width:540px) {
+    .stars-container {
+        height: 130rem;
+    }
+}
+
+.star {
+    position: absolute;
+    background: white;
+    width: 2.5px;
+    height: 2px;
+    border-radius: 50%;
+    animation: moveUp linear infinite;
+    animation-duration: 5s;
+    /* Adjust the animation duration (increase for slower movement) */
+}
+
+/* Animation to move stars upwards */
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10vh);
+        /* Adjust the distance the stars travel (decrease for slower movement) */
+    }
+}
+
+
+/* Blink Glowing Text Effect */
+
+.blink-text {
+    font-size: 60px;
+    /* line-height: calc(20px + 20vh); */
+    text-align: center;
+    text-shadow: 0 0 5px #31dae0, 0 0 15px #31dae0, 0 0 20px #31dae0, 0 0 40px #31dae0, 0 0 60px #0a80d5, 0 0 10px #31dae0, 0 0 98px #0a80d5;
+    color: #31dae0;
+    font-family: "Freeman", sans-serif;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 8s infinite;
+}
+
+@-webkit-keyframes blink {
+
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 5px #31dae0, 0 0 15px #31dae0, 0 0 20px #31dae0, 0 0 40px #31dae0, 0 0 60px #0a80d5, 0 0 10px #31dae0, 0 0 98px #0a80d5;
+        color: #31dae0;
+    }
+}
+
+@keyframes blink {
+
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 5px #447cff, 0 0 15px #447cff, 0 0 20px #447cff, 0 0 40px #447cff, 0 0 60px #0a80d5, 0 0 10px #447cff, 0 0 98px #0a80d5;
+        color: #31dae0;
+    }
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 22rem;
+    height: 200px;
+    background-color: #ffffff4a;
+    backdrop-filter: blur(2px);
+    margin: 15px;
+    border-radius: 20px;
+    padding: 20px 0 0 0;
+    overflow: hidden;
+    transition: all ease 0.3s;
+
+}
+
+._1{
+    background-image: url(/Pages/Images/acc.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+._2{
+    background-image: url(/Pages/Images/area.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+._3{
+    background-image: url(/Pages/Images/grades.jpg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+._4{
+    background-image: url(/Pages/Images/temp.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+._5{
+    background-image: url(/Pages/Images/even-odd.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+._6{
+    background-image: url(/Images/larger_no.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+._7{
+    background-image: url(/Pages/Images/interest.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+._8{
+    background-image: url(/Pages/Images/cube.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(1);
+}
+.box:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    box-shadow: 2px 2px 4px black;
+}
+
+@media(max-width:800px) {
+    .box {
+        filter: grayscale(0);
+    }
+}
+.container a{
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+}
+.box h2 {
+    filter:grayscale(0);
+    background-color: rgba(255, 255, 255, 0.121);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.box:hover {
+    h2{
+        color: white;
+    backdrop-filter: blur(5px);
+
+    }
+}
+
+@media (max-width:764px) {
+    .box {
+        width: 20rem;
+    }
+}
+@media (max-width:680px) {
+    .box {
+        width: 17rem;
+    }
+}
+@media (max-width:600px) {
+    .box {
+        width: 15rem;
+    }
+}
+@media (max-width:540px) {
+    .box {
+        width: 23rem;
+    }
+}
+@media (max-width:390px) {
+    .box {
+        width: 18rem;
+    }
+}

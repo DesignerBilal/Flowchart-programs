@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Afacad:ital,wght@0,400..700;1,400..700&family=Freeman&family=Poetsen+One&family=Sacramento&display=swap');
+body {
+    font-family: 'Afacad', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #4e1a82, #984aac);
+    /* Dark and light purple gradient */
+    overflow: hidden;
+}
+
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    width: 2.5px;
+    height: 2px;
+    border-radius: 50%;
+    animation: moveUp linear infinite;
+    animation-duration: 5s;
+    /* Adjust the animation duration (increase for slower movement) */
+}
+
+/* Animation to move stars upwards */
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10vh);
+        /* Adjust the distance the stars travel (decrease for slower movement) */
+    }
+}
+
+.content {
+    position: relative;
+    margin-top: 50px;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    border-radius: 8px;
+}
+
+.content h1 {
+    font-family: 'Freeman', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+
+form {
+    font-family: 'Afacad';
+    background-color: #ffffff1f;
+    backdrop-filter: blur(4px);
+    padding: 50px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    color: white;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Afacad';
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.links {
+    width: 90vw;
+    border-radius: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    /* padding: 10px; */
+    margin-top: 8vh;
+}
+
+.links a {
+    color: #984aac;
+    margin-bottom: 10vh;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all ease 0.3s;
+}
+
+.links a:hover {
+    color: white;
+    background-color: #bd6fd0;
+    backdrop-filter: blur(4px);
+}
+
+@media (max-width:1100px) {
+    .links-a{
+        display: none;
+    }
+    .links {
+        width: 50vw;
+        margin:8vh auto;
+    }
+}

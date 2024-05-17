@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Parallelogram Calculator</title>
+    <link rel="stylesheet" href="area.css">
+</head>
+
+<body>
+    <div class="stars-container">
+        <!-- Stars will be dynamically added here -->
+    </div>
+
+    <div class="content">
+        <h1>Calculate area of paralellogram</h1>
+        <form>
+            <label for="baseInput">Enter base (cm) of parallelogram:</label>
+            <input type="number" id="baseInput" min="0" required><br>
+
+            <label for="heightInput">Enter height (cm) of parallelogram:</label>
+            <input type="number" id="heightInput" min="0" required><br>
+
+            <button type="button" id="calculateButton">Calculate Area</button><br>
+
+            <div id="result"></div>
+        </form>
+
+        <br><br>
+        <div class="links">
+            <a href="/Pages/Assign Grade/assign_grade.html" target="_blank" class="links-a">Assign Grades</a>
+            <a href="/Pages/Even or Odd/even_odd.html" target="_blank" class="links-a">Whether the number is even or odd</a>
+            <a href="/Pages/Larger No/larger-no.html" target="_blank" class="links-a">Find larger number</a>
+            <a href="/Pages/All Projects/all.html" class="_4" target="_blank">All Projects</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("calculateButton").addEventListener("click", function () {
+            // Retrieve values from input fields
+            let base = parseFloat(document.getElementById("baseInput").value);
+            let height = parseFloat(document.getElementById("heightInput").value);
+
+            // Check if both fields are filled
+            if (isNaN(base) || isNaN(height)) {
+                document.getElementById("result").textContent = "Please enter valid numbers.";
+                return;
+            }
+
+            // Calculate area
+            let area = base * height;
+
+            // Display the result
+            document.getElementById("result").textContent = "Area of the parallelogram with the given " + base + " cm base and " + height + " cm height is: " + area + " cm²";
+        });
+    </script>
+    <script src="area.js"></script>
+</body>
+
+</html>
